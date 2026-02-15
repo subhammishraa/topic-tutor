@@ -5,7 +5,7 @@ A browser extension to enhance your browsing experience with custom scripts and 
 ### Features
 - Injects custom JavaScript and CSS into web pages
 - Popup UI for quick actions
-- Easy to configure and use
+- Easy to configure and use.
 
 ### Installation
 1. Clone this repository:
