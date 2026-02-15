@@ -1,0 +1,228 @@
+/* contentStyles.css - in-page UI for Topic Tutor */
+#topic-tutor-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#topic-tutor-toggle:hover {
+  background: #1d4ed8;
+}
+
+#topic-tutor-panel {
+  position: fixed;
+  bottom: 64px;
+  right: 16px;
+  width: 360px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  color: #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.8);
+  z-index: 2147483647;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#topic-tutor-panel * {
+  box-sizing: border-box;
+}
+
+#topic-tutor-panel .tt-header {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topic-tutor-panel .tt-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#topic-tutor-panel .tt-subtitle {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+#topic-tutor-panel .tt-topic {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+#topic-tutor-panel .tt-close {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#topic-tutor-panel .tt-close:hover {
+  color: #e5e7eb;
+}
+
+#topic-tutor-panel .tt-body {
+  padding: 8px 10px;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+#topic-tutor-panel .tt-loading {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+#topic-tutor-panel .tt-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+#topic-tutor-panel .tt-card {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+#topic-tutor-panel .tt-card:hover {
+  background: rgba(30, 64, 175, 0.5);
+  border-color: rgba(129, 140, 248, 0.8);
+}
+
+#topic-tutor-panel .tt-card-media {
+  flex: 0 0 64px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#topic-tutor-panel .tt-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#topic-tutor-panel .tt-placeholder-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  background: radial-gradient(circle at 0 0, #38bdf8, #1d4ed8);
+}
+
+#topic-tutor-panel .tt-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+#topic-tutor-panel .tt-card-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #e5e7eb;
+}
+
+#topic-tutor-panel .tt-card-meta {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+#topic-tutor-panel .tt-card-desc {
+  font-size: 11px;
+  color: #cbd5f5;
+  max-height: 34px;
+  overflow: hidden;
+}
+
+#topic-tutor-panel .tt-badge {
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#topic-tutor-panel .tt-badge-youtube {
+  background: rgba(248, 113, 113, 0.2);
+  color: #fecaca;
+}
+
+#topic-tutor-panel .tt-badge-book {
+  background: rgba(52, 211, 153, 0.2);
+  color: #bbf7d0;
+}
+
+#topic-tutor-panel .tt-badge-coursera {
+  background: rgba(59, 130, 246, 0.2);
+  color: #bfdbfe;
+}
+
+#topic-tutor-panel .tt-footer {
+  padding: 8px 10px;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  font-size: 10px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#topic-tutor-panel .tt-keywords-label {
+  color: #9ca3af;
+}
+
+#topic-tutor-panel .tt-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+#topic-tutor-panel .tt-tag {
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+}
+
+#topic-tutor-panel .tt-error {
+  font-size: 12px;
+  color: #fecaca;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(248, 113, 113, 0.15);
+}

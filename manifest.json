@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Topic Tutor",
+  "description": "Identify the topic of any page or YouTube video and recommend top courses, books, and videos.",
+  "version": "1.0.0",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*",
+    "https://www.googleapis.com/books/*",
+    "https://www.googleapis.com/youtube/*",
+    "https://www.googleapis.com/youtube/v3/*",
+    "https://www.coursera.org/*",
+    "https://coursera.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Topic Tutor"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "css": [
+        "contentStyles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
